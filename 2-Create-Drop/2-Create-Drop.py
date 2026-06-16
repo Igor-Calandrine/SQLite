@@ -29,4 +29,13 @@
 
 *   DROP TABLE nome_da_tabela;
 
+-Palavras reservadas
+   Existem palavras que pertencem à própria linguagem em que servem para dar ordens ao sistema, essas palavras são chamadas de Palavras Reservadas, como: CREATE, DROP, TABLE, SELECTED, WHERE.
+   O problema surge quado você quer dar o nome de uma coluna ou de uma tabela usando uma dessas palavras, para resolver esse conflite e avisar ao banco de dados que aquilo é apenas o nome de uma couna (um identificador) e não um comando, nós usamos o recurso de delimitação por aspas.
+
+   No SQLite, a forma padrão e mais recomendada pela linguagem para envolver nomes de tabelas ou colunas é o uso de aspas duplas (" ")
+
+-Textos
+   Sempre que você quiser inserir, atualizar ou pesquisar uma informação que seja composta por letras, palavras ou frases, você deve envolver esse conteúdo com aspas simples. Elas avisam ao SQLite onde o seu texto começa e onde ele termina.
+
 """

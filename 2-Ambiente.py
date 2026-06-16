@@ -12,7 +12,7 @@
       !O arquivo .db não pode ser criado manualmente clicando em "Novo Arquivo" no VSCode
    Pois isso geraria um arquivo de texto comum que o SQLite não reconheceria, ele precisa ser criado pelo próprio SQLite, através do comando:
 
-*     Ctrl + Shift + P -> SQLite: Open Database -> Create new database   
+*     Ctrl + Shift + P -> SQLite: Run Query  
 
 -Executando
    É importante entender que o arquivo .sql sozinho não faz nada, ele é apenas texto. O banco de dados não lê, não processa e não reage ao que está escrito lá enquanto você não mandar executar.
@@ -20,4 +20,20 @@
    Executar, ou dar "Run", é o ato de enviar os comandos escritos no arquivo .sql para o banco de dados processar. É nesse momento que o SQLite lê cada instrução de cima para baixo e realmente realiza as ações como: criar tabelas, inserir dados, apagar registros. Antes disso, tudo não passa de texto numa tela. O comando para executar no VSCode será:
    
 *     Ctrl + Shift + P -> SQLite: Run Query   
+
+-Selecionando uma Query
+   No mndo dos bancos de dados, uma query é uma instrução ou comando em texto que você envia para o banco de dados para que ele faça alguma ação.
+
+   Temos o comando:
+      *Run Selected Query
+      É uma das ferramentas mais úteis e poderosas quando você está trabalahdno com banco de dados no VS Code, a principal diferença entre ele e o "Run Query" comum é o controle que ele te dá sobre o que será executado. Para utilizar você deve:
+
+      *Selecionar com o mouse apenas a linha que você quer rodar
+      *Executar a seleção com o Run Selected Query
+      
+      O VSCode vai ignorar todo o resto do arquivo e enviar para o SQLite apenas aquela linhas que você marcou, dessa mandeira você evita desastres caso tenha um comando que não permita retorno, como deletar uma tabela no arquivo, permite que testes sejam realizadas antes de ter um resultado, e criar um ambiente de rascunho
+
+
+
+
 """
