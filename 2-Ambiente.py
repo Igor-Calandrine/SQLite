@@ -14,6 +14,8 @@
 
 *     Ctrl + Shift + P -> SQLite: Run Query  
 
+   Como o intuito desse resumo é criar e recriar muitas vezes para treinar cada etapa, um arquivo vai ser criado em cada pasta e um Run Query irá ser feito em cima desse arquivo.
+
 -Executando
    É importante entender que o arquivo .sql sozinho não faz nada, ele é apenas texto. O banco de dados não lê, não processa e não reage ao que está escrito lá enquanto você não mandar executar.
 
