@@ -16,6 +16,8 @@
 
 *     SELECT * FROM nome_da_tabela;
 
+
+
 -Pugins
    Há vários plugins para vizualizar uma tabela, eles serão usados para facilitar o trabalho, o comando será utilizado para os seguintes capítulos com diferentes objetivos.
 
