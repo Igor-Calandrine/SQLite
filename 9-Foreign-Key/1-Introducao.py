@@ -20,11 +20,9 @@
 
 -Pragma Foreign_Keys
    Por padrão normativo do QLite, a verificação de restrições de integridade referencial fica desativada a cada nova conexão por motivos de compatibilidade histórica. É necessário injetar este comando no escopo da dessão para habilitar o motor de validação de chaves estrangeiras.
+   Certifique-se de executar o comando de ativação e o de verificação na mesma sessão/janela de execução.
 
 *     PRAGMA foreign_keys = ON;
-
-   Para verificar basta:
-
 *     PRAGMA foreign_keys;
 
 Na sintaxe então teremos:
@@ -44,6 +42,7 @@ Na sintaxe então teremos:
 *      "produto" TEXTO NOT NULL,
 *      "valor" INTEGER,
 *      "nome" TEXT,
+*      "cliente_id" INTEGER,
 *      FOREIGN KEY ("cliente_id") REFERENCES "Clientes" ("id")
 *   ) STRICT;
 
@@ -64,6 +63,19 @@ Na sintaxe então teremos:
 
    !Cuidado:
       O efeito CASCADE pode ser muito perigoso se as tabelas estiverem muito encadeadas. Deletar um único regostro no topo da hierarquia pode apagar milhares de dados associados sem que vocÊ perceba. Use com sabedoria!
+
+   Veja o exemplo da sintaxe:
+
+   *   CREATE TABLE "Pedidos" (
+*        "id" INTEGER PRIMARY KEY,
+*        "produto" TEXTO NOT NULL,
+*        "valor" INTEGER,
+*        "nome" TEXT,
+*        FOREIGN KEY ("cliente_id") REFERENCES "Clientes" ("id")
+!          ON DELETE CASCADE
+!          ON UPDATE CASCADE
+*   ) STRICT;
+
 
 
 
