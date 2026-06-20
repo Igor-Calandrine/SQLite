@@ -1,5 +1,5 @@
 CREATE TABLE papelaria (
-   id INTEGER PRIMARY KEY,
+   id INTEGER NOT NULL,
    nome TEXT NOT NULL,
    qntd INTEGER NOT NULL,
    valor INTEGER NOT NULL
