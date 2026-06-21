@@ -19,7 +19,7 @@
    Apartir daqui, o banco de dados deixa de ser apenas um amontoado de planilhas isoladas e passa a funcionar como um ecossistema inteligente, onde as informações conversam entre si com total segurança, organização e velocidade. Você acabou de dominar a base de como o mundo organiza seus dados.
 
 -Pragma Foreign_Keys
-   Por padrão normativo do QLite, a verificação de restrições de integridade referencial fica desativada a cada nova conexão por motivos de compatibilidade histórica. É necessário injetar este comando no escopo da dessão para habilitar o motor de validação de chaves estrangeiras.
+   Por padrão normativo do SQLite, a verificação de restrições de integridade referencial fica desativada a cada nova conexão por motivos de compatibilidade histórica. É necessário injetar este comando no escopo da dessão para habilitar o motor de validação de chaves estrangeiras.
    Certifique-se de executar o comando de ativação e o de verificação na mesma sessão/janela de execução.
 
 *     PRAGMA foreign_keys = ON;
@@ -47,9 +47,9 @@ Na sintaxe então teremos:
 *   ) STRICT;
 
 -Cascade
-   É um regra de integridadee referencial associada às FK. Ele serve para automatizar ações entre tabelas relacionadas, garantindo que, quando um registro na tabela pai for modificado ou excluìdo, as alterações sejam refletidas automaticamente nas tabelas filhas.
+   É um regra de integridadee referencial associada às FK. Ele serve para automatizar ações entre tabelas relacionadas, garantindo que, quando um registro na tabela pai for modificado ou excluído, as alterações sejam refletidas automaticamente nas tabelas filhas.
    
-   *Sem o CASCADE, você teria que deletar ou atualizar manualmente os addos em várias tabelas para evitar erros de restrição ou dados órfãos.
+   *Sem o CASCADE, você teria que deletar ou atualizar manualmente os dados em várias tabelas para evitar erros de restrição ou dados órfãos.
 
    Existem dois cenários principais onde o CASCADE é aplicado
 
@@ -62,7 +62,7 @@ Na sintaxe então teremos:
       Ex: Se o ID de um produto mudar de 10 para 20, todos os pedidos que continham o produto 10 serão atualizados para 20.
 
    !Cuidado:
-      O efeito CASCADE pode ser muito perigoso se as tabelas estiverem muito encadeadas. Deletar um único regostro no topo da hierarquia pode apagar milhares de dados associados sem que vocÊ perceba. Use com sabedoria!
+      O efeito CASCADE pode ser muito perigoso se as tabelas estiverem muito encadeadas. Deletar um único registro no topo da hierarquia pode apagar milhares de dados associados sem que você perceba. Use com sabedoria!
 
    Veja o exemplo da sintaxe:
 

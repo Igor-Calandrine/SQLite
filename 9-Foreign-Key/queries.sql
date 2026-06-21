@@ -19,6 +19,7 @@ CREATE TABLE Produtos (
    "produto" TEXT NOT NULL,
    "email_comprador" TEXT NOT NULL,
    FOREIGN KEY ("email_comprador") REFERENCES Usuarios ("email")
+      ON UPDATE CASCADE
    ) STRICT;
 
 INSERT INTO Produtos ("produto", "email_comprador") VALUES
