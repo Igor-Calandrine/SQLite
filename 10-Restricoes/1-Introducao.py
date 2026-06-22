@@ -77,16 +77,16 @@
 
    No exemplo abaixo temos todos os comandos acima
 
-   CREATE TABLE Funcionarios (
-      "id" INTEGER PRIMARY KEY,
-      "nome" TEXT NOT NULL COLLATE NOCASE,
-      "idade" INTEGER NOT NULL CHECK("idade" >= 18),
-      "email" TEXT NOT NULL UNIQUE COLLATE NOCASE,
-      "salario REAL NOT NULL CHECK("salario" > 0),
-      "endereço" TEXT DEFALUT 'Brasil',
-      "registro" TEXT DEFAULT CURRENT_TIMESTAMP,
-      "departamento" TEXT NOT NULL CHECK("departamento" IN ('Vendas', 'TI', 'RH'))
-      ) STRICT;
+*   CREATE TABLE Funcionarios (
+*      "id" INTEGER PRIMARY KEY,
+*      "nome" TEXT NOT NULL COLLATE NOCASE,
+*      "idade" INTEGER NOT NULL CHECK("idade" >= 18),
+*      "email" TEXT NOT NULL UNIQUE COLLATE NOCASE,
+*      "salario REAL NOT NULL CHECK("salario" > 0),
+*      "endereço" TEXT DEFALUT 'Brasil',
+*      "registro" TEXT DEFAULT CURRENT_TIMESTAMP,
+*      "departamento" TEXT NOT NULL CHECK("departamento" IN ('Vendas', 'TI', 'RH'))
+*      ) STRICT;
 
 
 
