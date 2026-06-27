@@ -1,0 +1,11 @@
+SELECT * FROM produtos;
+
+SELECT DATE('NOW');
+SELECT TIME('NOW');
+SELECT DATETIME('NOW');
+
+SELECT DATE('NOW', '+3 DAY');
+SELECT TIME('NOW', '-3 HOURS');
+SELECT TIME('NOW', '+8 HOURS');
+
+SELECT STRFTIME('%d-%m-%Y %H:%m:%S', 'NOW', '-3 HOURS') AS 'Horário de Brasília';
