@@ -25,4 +25,15 @@
    ou
 *      SELECT * FROM produtos ORDER BY nome DESC;
 
+-Having
+   É uma cláusula que serve para filtrar os dados depois que eles já foram agrupados pela cláusula GROUP BY. O WHERE não consegue filtrar resultados baseados em funções agregadas (como SUM, AVG, COUNT, MAX, MIN)
+   A sintaxe fica como:
+
+*      SELECT categoria, AVG(preco) AS preco_medio FROM produtos
+*      GROUP BY categoria HAVING AVG(preco) > 50.00
+*      ORDER BY categoria ASC;
+
+
+   
+
 """
