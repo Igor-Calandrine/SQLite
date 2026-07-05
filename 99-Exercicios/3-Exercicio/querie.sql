@@ -10,8 +10,10 @@ SELECT courses.slug, lessons.title, lessons.lesson_order
 FROM courses
 JOIN lessons
 ON courses.id = lessons.course_id
-WHERE courses.id = 1
-ORDER BY lessons.lesson_order;
+WHERE courses.id = 
+      (SELECT id FROM courses 
+      WHERE slug = 'html-para-iniciantes')
+ORDER BY lessons.lesson_order ASC;
 
 -- 2. Somar o total de segundos das aulas do curso de css-animacoes
 
@@ -21,19 +23,21 @@ SELECT   courses.slug,
 FROM courses
 JOIN lessons
 ON courses.id = lessons.course_id
-WHERE courses.id = 2
+WHERE courses.id = 
+      (SELECT id FROM courses 
+      WHERE slug = 'css-animacoes')
 GROUP BY courses.slug
 ORDER BY lessons.seconds;
 
 -- 3. Contar o total de aulas e agrupar por curso
 
 SELECT   courses.slug,
-         SUM(lessons.course_id) AS 'total aulas'
+         COUNT(lessons.course_id) AS 'total aulas'
 FROM courses
 JOIN lessons
 ON courses.id = lessons.course_id
 GROUP BY courses.slug
-ORDER BY SUM(lessons.course_id);
+ORDER BY COUNT(lessons.course_id);
 
 -- 4. Somar o total de segundos das aulas, agrupar por curso e ordenar o total de segundos por ordem decrescente
 
@@ -60,42 +64,55 @@ ORDER BY SUM(lessons.seconds) DESC;
 
 SELECT   courses.id,
          courses.title, 
-         SUM(lessons.seconds)
+         SUM(lessons.seconds) AS 'segundos'
 FROM courses
 JOIN lessons
 ON courses.id = lessons.course_id
 GROUP BY courses.slug
-HAVING SUM(lessons.seconds) >= 2300
+-- HAVING SUM(lessons.seconds) >= 2300
 ORDER BY SUM(lessons.seconds) DESC;
 
 -- 7. Selecione o ID dos certificados de mariana@email.com
 
-SELECT   users.id, users.name, users.email, 
+SELECT   users.name, users.email, 
          certificates.id
 FROM users
 JOIN certificates
-ON users.id = certificates.user_id
-WHERE users.id = 8;
+ON certificates.user_id =
+      (SELECT id FROM users
+      WHERE email = 'mariana@email.com')
+WHERE users.id = 
+      (SELECT id FROM users
+      WHERE email = 'mariana@email.com');
 
 -- 8. Selecione todas as aulas completas ou não pelo usuário lucas@email.com "ID=4". Mostre o título da aula e se está completa ou não
 
-SELECT   users.id, users.name, users.email, 
-         lessons.title,
-         -- lessons_completed.lesson_id AS 'Completas'
-
-         CASE
-            WHEN lessons_completed.lesson_id IS NULL 
-               THEN 'Incompleta'
-               ELSE 'Completa'
-         END AS status
-
-FROM users
-CROSS JOIN lessons
-LEFT JOIN lessons_completed
-ON lessons.id = lessons_completed.lesson_id
-AND users.id = lessons_completed.user_id
-WHERE users.id = 4
+SELECT   u.id, u.name, u.email, 
+         l.title,
+         l_c.lesson_id
+FROM users AS u
+CROSS JOIN lessons AS l
+LEFT JOIN lessons_completed AS l_c 
+   ON l_c.lesson_id = l.id
+   AND l_c.user_id = u.id
+WHERE u.id = 
+      (SELECT id FROM users
+      WHERE email = 'lucas@email.com')
 ;
+
+SELECT   l.id, l.title, l_c.completed
+FROM lessons AS l
+LEFT JOIN lessons_completed AS l_c
+   ON l.id = l_c.lesson_id
+   AND l_c.user_id = 
+      (SELECT id FROM users
+      WHERE email = 'lucas@email.com')
+
+-- WHERE l_c.user_id = 
+--    (SELECT id FROM users
+--    WHERE email = 'lucas@email.com')
+;
+ 
 
 -- 9. Selecione todas as aulas anterior/próxima da aula funcoes-e-escopo. Retorne 3 aulas (se existirem): a anterior, a atual e a próxima. Utilize lesson_order para isso.
 

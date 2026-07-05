@@ -52,12 +52,23 @@ cliente.nome           pedidos.cliente_id
    
       *É um dos tipo de JOIN mais utilizados, principalmente para descobrir registros que não possuem relacionamento.
 
+-Right Join
+   O RIGHT JOIN é um tipo de junção utilizado para retornar todos os registros da tabela localizada à direita da junção, mesmo que não exista uma correspondência na tabela da esquerda.
+   Quando não há correspondência, as colunas da tabela da esquerda são preenchidas com NULL
 
 -Self Join
    O SELF JOIN é uma técnica em SQL na qual uma tabela é relacionada com ela mesma.
    Apesar do nome, não existe um comando chamado SELF JOIN. O que existe é um JOIN em que a mesma tabela aparece duas vezes com aliases diferentes.
 
    Assim por exemplo poderia filtrar da mesma tabela funcionários que tem o mesmo gerente
+
+-Cross Join
+   O CROSS JOIN é um tipo de junção utilizado para combinar todas as linhas de uma tabela com todas as linhas de outra tabela. Diferentemente do INNER JOIN, LEFT JOIN ou RIGHT JOIN, ele não utiliza uam condição de relacionamento (ON), pois seu objetivo é gerar as combinações possíveis entre os registros das tabelas envolvidas.
+   
+   Esse tipo de junção produz o chamado produto cartesiano, por ese motivo deve-se ter 
+   
+   !cuidado ao utilizá-lo em tabelas grandes,
+   !pois a quantidade de registros pode crescer rapidamente.
 
 
 
