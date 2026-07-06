@@ -2,7 +2,9 @@ CREATE TABLE produtos (
    "id" INTEGER NOT NULL,
    "nome" TEXT NOT NULL,
    "quantidade" INTEGER NOT NULL,
-   "preço" REAL NOT NULL
+   "preço" REAL NOT NULL,
+   "total" REAL 
+      ALWAYS GENERATED AS ("preço" * "quantidade") VIRTUAL
 );
 
 INSERT INTO produtos ("id", "nome", "quantidade", "preço") VALUES
@@ -18,5 +20,7 @@ UPDATE produtos SET "quantidade" = 35 WHERE "id" = 5;
 
 SELECT * FROM produtos;
 SELECT "nome", "preço" FROM produtos;
+
+DROP TABLE produtos;
 
 
