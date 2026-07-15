@@ -1,5 +1,5 @@
 """
-Alterando Dados JSON
+-Alterando Dados JSON
    O SQLite oferece diversas funções para modificar documentos JSON armazenados no banco de dados. Todas elas retornam um novo documento JSON contendo as alterações realizadas, já que os valores JSON são imutáveis.
    As principais funções são:
 

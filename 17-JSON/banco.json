@@ -1,0 +1,72 @@
+[
+  {
+    "username": "joaosilva",
+    "nome": "João",
+    "sobrenome": "Silva",
+    "email": "joao.silva@email.com",
+    "password": "Senha@123"
+  },
+  {
+    "username": "mariasantos",
+    "nome": "Maria",
+    "sobrenome": "Santos",
+    "email": "maria.santos@email.com",
+    "password": "Senha@456"
+  },
+  {
+    "username": "pedrooliveira",
+    "nome": "Pedro",
+    "sobrenome": "Oliveira",
+    "email": "pedro.oliveira@email.com",
+    "password": "Senha@789"
+  },
+  {
+    "username": "anacosta",
+    "nome": "Ana",
+    "sobrenome": "Costa",
+    "email": "ana.costa@email.com",
+    "password": "Senha@321"
+  },
+  {
+    "username": "lucassouza",
+    "nome": "Lucas",
+    "sobrenome": "Souza",
+    "email": "lucas.souza@email.com",
+    "password": "Senha@654"
+  },
+  {
+    "username": "carolferreira",
+    "nome": "Carolina",
+    "sobrenome": "Ferreira",
+    "email": "carolina.ferreira@email.com",
+    "password": "Senha@987"
+  },
+  {
+    "username": "rafaellima",
+    "nome": "Rafael",
+    "sobrenome": "Lima",
+    "email": "rafael.lima@email.com",
+    "password": "Senha@159"
+  },
+  {
+    "username": "julianaalmeida",
+    "nome": "Juliana",
+    "sobrenome": "Almeida",
+    "email": "juliana.almeida@email.com",
+    "password": "Senha@753"
+  },
+  {
+    "username": "brunorocha",
+    "nome": "Bruno",
+    "sobrenome": "Rocha",
+    "email": "bruno.rocha@email.com",
+    "password": "Senha@852"
+  },
+  {
+    "username": "fernandapereira",
+    "nome": "Fernanda",
+    "sobrenome": "Pereira",
+    "email": "fernanda.pereira@email.com",
+    "password": "Senha@951"
+  }
+]

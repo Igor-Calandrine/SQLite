@@ -20,7 +20,7 @@
 *   ALTER TABLE tabela_antiga
 *   RENAME TO tabela_nova;
 
-*   ALTER TABELA tabela
+*   ALTER TABLE tabela
 *   RENAME COLUMN coluna_antiga TO coluna_nova;
 
 *   ALTER TABLE tabela
