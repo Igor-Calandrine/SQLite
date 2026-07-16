@@ -26,7 +26,7 @@ cliente.nome           pedidos.cliente_id
    Agora observe que clientes.id e pedidos.cliente_id são uma dados relacionais, podemos utilizar o 
    JOIN para obter informações de ambas as tabelas
 
-   *clientes.id = pediso.cliente_id
+   *clientes.id = pedido.cliente_id
 
    Utilizando a seguinte sintaxe:
 

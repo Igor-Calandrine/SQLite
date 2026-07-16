@@ -18,6 +18,16 @@ INSERT INTO produtos ("id", "nome", "quantidade", "preço") VALUES
 UPDATE produtos SET "preço" = 2 WHERE "nome" = 'couve';
 UPDATE produtos SET "quantidade" = 35 WHERE "id" = 5;
 
+UPDATE produtos
+SET nome = 'melao'
+WHERE id = 6
+RETURNING "id", "nome", "quantidade", "preço";
+
+UPDATE produtos
+SET "quantidade" = 40
+WHERE nome = 'banana' 
+RETURNING "id", "nome", "quantidade", "preço";
+
 SELECT * FROM produtos;
 SELECT "nome", "preço" FROM produtos;
 

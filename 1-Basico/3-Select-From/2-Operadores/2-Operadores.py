@@ -10,7 +10,7 @@
 *      >= ------- Maior ou Igual
 
 -Is/Is Not
-   Quando um campo possui o valor NULL, comparações utilizando = ou != não retornam o resultaado esperado, pois o valor nulo representa a ausência de informaçao. Nesses casos, deve-se utilizar os operadores IS e IS NOT. 
+   Quando um campo possui o valor NULL, comparações utilizando = ou != não retornam o resultado esperado, pois o valor nulo representa a ausência de informaçao. Nesses casos, deve-se utilizar os operadores IS e IS NOT. 
    O uso correto de IS e IS NOT torna as consultas mais precisas e evita erros de interpretação dos dados armazenados no banco. Por isso, esses operadores são fundamentais para o tratamento adquado de valores nulos em banco de dados SQLite.
    Como exemplo temos:
 

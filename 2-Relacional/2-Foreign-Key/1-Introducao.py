@@ -27,7 +27,7 @@
 
 Na sintaxe então teremos:
 
-   Na tabela abaixo tempos dos dados cadastrais exclusivos de cada cliente. A coluna id é a Primary Key (PK)
+   Na tabela abaixo temos dos dados cadastrais exclusivos de cada cliente. A coluna id é a Primary Key (PK)
 
 *   CREATE TABLE "Clientes" (
 *      "id" INTEGER PRIMARY KEY,

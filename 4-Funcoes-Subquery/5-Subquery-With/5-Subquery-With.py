@@ -1,6 +1,6 @@
 """
 -Subquery
-   Uma Subquery, ou consulta aninhada) é uma consulta SQL escrita dentro de outra consulta. Ela permite utilizar o resultado de um SELECT como entrada para outro comando SQL.
+   Uma Subquery, ou consulta aninhada, é uma consulta SQL escrita dentro de outra consulta. Ela permite utilizar o resultado de um SELECT como entrada para outro comando SQL.
    É um recurso que permite criar consultas inteligentes sem  precisar dividir o processamento em várias etapas. Ex:
 
       SELECT * FROM produtos 
